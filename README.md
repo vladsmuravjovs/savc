@@ -18,7 +18,7 @@ Ja "Stretch" lietotāja preferencēs ir "false", tad bildes mainās tikai tad, k
 ## Praktiskais pielietojums
 
 Lietotājs šo rīku var izmantot, lai apvienotu audio (dziesmu, vai vairākas dziesmas) un bildes vienā videoklipā jebkāda iemesla pēc.
-Praktiski šo rīku var pielietot cilvēki, kuriem ir nepieciešams ļoti ātri un vienkārši izlikt mūzikas albumu interneta pakalpojumos, piemēram, YouTube vai lokāli un vienkārši atsūtīt bildi ar dziesmu draugiem caur Discord.
+Praktiski šo rīku var pielietot cilvēki, kuriem ir nepieciešams ļoti ātri un vienkārši izlikt mūzikas albumu (vai vienu dziesmu) video-failā interneta pakalpojumos, piemēram, YouTube vai vienkārši atsūtīt bildi ar dziesmu (vai skaņas efektu) videoklipā draugiem caur Discord.
 
 ## Projekta Mērķis:
 Projekta mērķis ir atvieglot un automatizēt pavisam vienkāršu videoklipu veidošanu audio-video materiālu producētājiem, bez nepieciešamības vērt vaļā video redaktora rīku.
