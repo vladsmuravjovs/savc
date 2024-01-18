@@ -1,0 +1,1 @@
+{"workdir": "\\dump\\", "outputname": "super.mp4", "res": [1280, 1280]}
