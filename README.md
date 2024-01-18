@@ -30,3 +30,7 @@ Projekta mērķis ir atvieglot un automatizēt pavisam vienkāršu videoklipu ve
 PIL tiek pielietots, lai ļoti vienkārši varētu rediģēt bildes un to izšķirtspēju, nomainīt bit-depth definīcijas.
 
 MoviePy tiek pielietots, lai izveidotu video failus un apvienotu gan audio, gan video daļas.
+
+## demonstratīvs videoklips
+
+[Video](https://youtu.be/92nSoJlj7AU?si=CpBAZQ6UZ1l6C0Uq)
