@@ -5,7 +5,8 @@ def load():
     userPrefs = {
         'workdir':'\\dump\\',
         'outputname':'video.mp4',
-        'res':[480,480]
+        'res':[480,480],
+        'stretch':False
     }
 
     if os.path.exists(os.getcwd() + '\\userprefs.txt'):

@@ -1,1 +1,1 @@
-{"workdir": "\\dump\\", "outputname": "super.mp4", "res": [1280, 1280]}
+{"workdir": "\\dump\\", "outputname": "video.mp4", "res": [480, 480], "stretch": false}

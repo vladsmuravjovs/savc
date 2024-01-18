@@ -1,7 +1,5 @@
 import os
 
-import numpy as np
-
 import prefs as pr
 
 from moviepy import *
@@ -19,14 +17,37 @@ def makeVideo(files):
         audio.append(AudioFileClip(wdir + aud))
 
     images = []
-    for i in range(0, len(audio)):
-        img = Image.open(wdir + files['images'][i])
-        img = img.resize(prefs['res'])
-        img = img.convert("RGB", palette=Image.ADAPTIVE, colors=32)
-        img = img.save(wdir + '__' + files['images'][i])
+    if prefs['stretch'] == False:
+        for i in range(0, len(audio)):
+            indx = i
+            
+            if i >= len(files['images']):
+                indx = len(files['images'])-1
+            
+            img = Image.open(wdir + files['images'][indx])
+            img = img.resize(prefs['res'])
+            img = img.convert("RGB", palette=Image.ADAPTIVE, colors=32)
+            img = img.save(wdir + '__' + files['images'][indx])
 
-        images.append(ImageClip(wdir + '__' + files['images'][i], duration=audio[i].duration))
+            images.append(ImageClip(wdir + '__' + files['images'][indx], duration=audio[i].duration))
+    else:
+        # get the full duration of audio
+        fullduration = 0
+        
+        for i in audio:
+            fullduration += i.duration
+        
+        # normalize it to the amount of images
+        normtime = fullduration / len(files['images'])
+        for i in range(0,len(files['images'])):
+            img = Image.open(wdir + files['images'][i])
+            img = img.resize(prefs['res'])
+            img = img.convert("RGB", palette=Image.ADAPTIVE, colors=32)
+            img = img.save(wdir + '__' + files['images'][i])
 
+            images.append(ImageClip(wdir + '__' + files['images'][i], duration=normtime))
+
+    
     audio_clip = concatenate_audioclips(audio)
     video_clip = concatenate_videoclips(images, method="compose")
     video_clip = video_clip.set_audio(audio_clip)

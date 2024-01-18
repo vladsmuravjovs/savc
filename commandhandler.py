@@ -46,6 +46,10 @@ def editPref(prefName):
     newVal = input()
     if(newVal.startswith('[') and newVal.endswith(']')):
         newVal = json.loads(newVal)
+    elif(newVal.lower() == "true"):
+        newVal = True
+    elif(newVal.lower() == "false"):
+        newVal = False
     
     prefs[prefName] = newVal
 
